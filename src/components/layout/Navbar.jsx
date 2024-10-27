@@ -14,8 +14,8 @@ function Navbar({ title, icon }) {
             </Link>
         </div>
 
-        <div className='flex-1 px-2 mx-2'>
-            <div className='flex justify-end'>
+        <div className='flex-none px-2 mx-2'>
+            <div className='flex items-stretch'>
               <Link to='/' className='btn btn-ghost btn-sm rounded-btn'>
                 Home
               </Link>
