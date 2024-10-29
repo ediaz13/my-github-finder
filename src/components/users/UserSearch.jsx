@@ -2,9 +2,9 @@ import { useState, useContext } from "react";
 import GithubContext from "../../context/github/GithubContext";
 
 function UserSearch() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   
-  const { users } = useContext(GithubContext);
+  const { users, searchUsers } = useContext(GithubContext);
   
   const handleChange = (e) => {
     setText(e.target.value);
@@ -15,11 +15,9 @@ function UserSearch() {
 
     if (text === "") {
       alert("Please enter something");
-      return;
     } else {
-        // Call the searchUsers function from the parent component
-        // and pass the text as an argument
-        //searchUsers(text
+        searchUsers(text);
+        setText('');
     }
 
     console.log(text);
@@ -61,7 +59,7 @@ function UserSearch() {
           </div>
         </form>
       </div>
-      if {users.length > 0 && (
+      {users.length > 0 && (
         <div>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
           Clear
