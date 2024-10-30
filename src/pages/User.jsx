@@ -14,7 +14,7 @@ function User() {
 
   return (
     <div>
-      User
+      {user.login}
     </div>
   )
 }
