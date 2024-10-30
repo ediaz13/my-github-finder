@@ -50,7 +50,7 @@ export const GithubProvider = ({ children }) => {
     const getUser = async (login) => {
         setLoading()
 
-        const res = await fetch(`${GITHUB_URL}/users?${login}`, {
+        const res = await fetch(`${GITHUB_URL}/users/${login}`, {
             headers: {
                 Authorization: `token ${GITHUB_TOKEN}`,
             },
