@@ -2,7 +2,6 @@ import React from "react";
 import {
   FaEye,
   FaStar,
-  FaCodeBranch,
   FaLink,
   FaInfo,
   FaUtensils,
